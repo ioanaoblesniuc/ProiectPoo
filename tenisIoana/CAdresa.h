@@ -2,6 +2,8 @@
 #include "CExceptie.h"
 #include "CStrada.h"
 
+//modificare 
+
 class CAdresa
 {
 	CString* _mTara;
