@@ -1,10 +1,40 @@
-﻿Build started 8/27/2016 11:18:29 AM.
-     1>Project "C:\Users\Ioana\Documents\Visual Studio 2012\Projects\tenisIoana\tenisIoana\tenisIoana.vcxproj" on node 2 (ClCompile target(s)).
+﻿Build started 8/27/2016 3:04:06 PM.
+     1>Project "C:\Users\Ioana\Documents\Visual Studio 2012\Projects\tenisIoana_git\tenisIoana\tenisIoana.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt CUser.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Bilet.cpp CUser.cpp _CUser.cpp
+         _CUser.cpp
+     1>c:\users\ioana\documents\visual studio 2012\projects\tenisioana_git\tenisioana\_cuser.cpp(135): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+     1>c:\users\ioana\documents\visual studio 2012\projects\tenisioana_git\tenisioana\_cuser.cpp(181): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+     1>c:\users\ioana\documents\visual studio 2012\projects\tenisioana_git\tenisioana\_cuser.cpp(210): warning C4390: ';' : empty controlled statement found; is this the intent?
+     1>c:\users\ioana\documents\visual studio 2012\projects\tenisioana_git\tenisioana\_cuser.cpp(274): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+     1>c:\users\ioana\documents\visual studio 2012\projects\tenisioana_git\tenisioana\_cuser.cpp(294): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+     1>c:\users\ioana\documents\visual studio 2012\projects\tenisioana_git\tenisioana\_cuser.cpp(357): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : see declaration of 'strtok'
+     1>c:\users\ioana\documents\visual studio 2012\projects\tenisioana_git\tenisioana\_cuser.cpp(378): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : see declaration of 'strtok'
+     1>c:\users\ioana\documents\visual studio 2012\projects\tenisioana_git\tenisioana\_cuser.cpp(434): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+         Bilet.cpp
+         Generating Code...
+         Skipping... (no relevant changes detected)
          CUser.cpp
-     1>Done Building Project "C:\Users\Ioana\Documents\Visual Studio 2012\Projects\tenisIoana\tenisIoana\tenisIoana.vcxproj" (ClCompile target(s)).
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Ioana\Documents\Visual Studio 2012\Projects\tenisIoana_git\Debug\tenisIoana.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Ioana\Documents\Visual Studio 2012\Projects\tenisIoana_git\Debug\tenisIoana.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Ioana\Documents\Visual Studio 2012\Projects\tenisIoana_git\Debug\tenisIoana.lib" /MACHINE:X86 Debug\Bilet.obj
+         Debug\CAdresa.obj
+         Debug\CExceptie.obj
+         Debug\CStrada.obj
+         Debug\CString.obj
+         Debug\CUser.obj
+         Debug\Source.obj
+         Debug\Utils.obj
+         Debug\_CUser.obj
+         tenisIoana.vcxproj -> C:\Users\Ioana\Documents\Visual Studio 2012\Projects\tenisIoana_git\Debug\tenisIoana.exe
+     1>Done Building Project "C:\Users\Ioana\Documents\Visual Studio 2012\Projects\tenisIoana_git\tenisIoana\tenisIoana.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.82
+Time Elapsed 00:00:03.35

@@ -2,8 +2,9 @@
 #include "CExceptie.h"
 #include "CStrada.h"
 
-//modificare 
-
+//deci lucrez pe asta
+//gen acum
+//nu?dap haide sa adaugam o clasa.zi-mi tu un nume de clasa pe care vrei sa il adaugi clasa Bilet
 class CAdresa
 {
 	CString* _mTara;

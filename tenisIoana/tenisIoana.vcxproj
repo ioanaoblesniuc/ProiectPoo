@@ -76,6 +76,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Bilet.h" />
     <ClInclude Include="CAdresa.h" />
     <ClInclude Include="CExceptie.h" />
     <ClInclude Include="CStrada.h" />
@@ -86,6 +87,7 @@
     <ClInclude Include="_CUser.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Bilet.cpp" />
     <ClCompile Include="CAdresa.cpp" />
     <ClCompile Include="CExceptie.cpp" />
     <ClCompile Include="CStrada.cpp" />

@@ -65,6 +65,7 @@ class Admin:public _CUser
 	static Admin *_mInstance;
 	Admin();
 	Admin(char* tip);
+	~Admin();
 
 public:
 	static Admin* getInstance(char*);
