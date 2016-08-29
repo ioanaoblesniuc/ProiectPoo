@@ -1,3 +1,4 @@
+#pragma once
 #include "CUser.h"
 #include "CAdresa.h"
 

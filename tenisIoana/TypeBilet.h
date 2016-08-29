@@ -1,0 +1,6 @@
+
+
+enum TypeBilet {
+	BiletIeftin,
+	BiletScump
+};

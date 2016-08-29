@@ -13,6 +13,30 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\factories">
+      <UniqueIdentifier>{9aae1721-0a6f-4067-b2ae-fc9ddee19b6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\factories">
+      <UniqueIdentifier>{9371b43f-fc53-4694-8b72-0a9001fc6b9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\util">
+      <UniqueIdentifier>{b3989014-7e3d-4a31-ad53-18bcecbd7d75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\util">
+      <UniqueIdentifier>{9e672408-049e-4416-88bc-0638b6aa7966}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\exceptions">
+      <UniqueIdentifier>{9407643f-f3bf-4850-95ac-d11eb7799b3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\exceptions">
+      <UniqueIdentifier>{20301c19-e64f-430c-8125-7d36a4cca262}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\TennisManagment">
+      <UniqueIdentifier>{833cd776-81aa-43e9-a9f4-5ad338c08d56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Turneu">
+      <UniqueIdentifier>{05bf1843-7a9c-4672-9444-7fdc631d3f56}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CUser.h">
@@ -30,27 +54,45 @@
     <ClInclude Include="CString.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Util.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="UserFactory.h">
+      <Filter>Header Files\factories</Filter>
     </ClInclude>
-    <ClInclude Include="Errors.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Util.h">
+      <Filter>Header Files\util</Filter>
     </ClInclude>
     <ClInclude Include="CExceptie.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="Errors.h">
+      <Filter>Header Files\exceptions</Filter>
     </ClInclude>
     <ClInclude Include="Bilet.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\TennisManagment</Filter>
+    </ClInclude>
+    <ClInclude Include="_Bilet.h">
+      <Filter>Header Files\TennisManagment</Filter>
+    </ClInclude>
+    <ClInclude Include="Inchiriere.h">
+      <Filter>Header Files\TennisManagment</Filter>
+    </ClInclude>
+    <ClInclude Include="Zbor.h">
+      <Filter>Header Files\TennisManagment</Filter>
+    </ClInclude>
+    <ClInclude Include="Ora.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="CData.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="Turneu.h">
+      <Filter>Header Files\Turneu</Filter>
+    </ClInclude>
+    <ClInclude Include="Companies.h">
+      <Filter>Header Files\TennisManagment</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CString.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Utils.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CExceptie.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CUser.cpp">
@@ -69,6 +111,21 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Bilet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UserFactory.cpp">
+      <Filter>Source Files\factories</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="CExceptie.cpp">
+      <Filter>Source Files\exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="_Bilet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Inchiriere.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

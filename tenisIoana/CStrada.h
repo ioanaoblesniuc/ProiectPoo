@@ -1,3 +1,4 @@
+#pragma once
 #include "CString.h"
 #include "CExceptie.h"
 

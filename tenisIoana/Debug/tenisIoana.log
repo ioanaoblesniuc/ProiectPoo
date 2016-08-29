@@ -1,7 +1,23 @@
-﻿Build started 8/27/2016 3:04:06 PM.
+﻿Build started 8/29/2016 1:20:26 AM.
      1>Project "C:\Users\Ioana\Documents\Visual Studio 2012\Projects\tenisIoana_git\tenisIoana\tenisIoana.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Bilet.cpp CUser.cpp _CUser.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Bilet.cpp CAdresa.cpp CUser.cpp Inchiriere.cpp UserFactory.cpp _Bilet.cpp _CUser.cpp
+         _Bilet.cpp
+     1>c:\users\ioana\documents\visual studio 2012\projects\tenisioana_git\tenisioana\_bilet.cpp(10): error C2084: function '_Bilet::~_Bilet(void)' already has a body
+                 c:\users\ioana\documents\visual studio 2012\projects\tenisioana_git\tenisioana\_bilet.h(31) : see previous definition of '{dtor}'
+         Inchiriere.cpp
+     1>c:\users\ioana\documents\visual studio 2012\projects\tenisioana_git\tenisioana\inchiriere.cpp(10): error C2084: function 'Inchiriere::~Inchiriere(void)' already has a body
+                 c:\users\ioana\documents\visual studio 2012\projects\tenisioana_git\tenisioana\inchiriere.h(23) : see previous definition of '{dtor}'
+         Bilet.cpp
+     1>c:\users\ioana\documents\visual studio 2012\projects\tenisioana_git\tenisioana\bilet.cpp(6): error C2440: 'return' : cannot convert from 'BiletScump *' to 'Bilet *'
+                 Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+     1>c:\users\ioana\documents\visual studio 2012\projects\tenisioana_git\tenisioana\bilet.cpp(11): error C2440: 'return' : cannot convert from 'BiletIeftin *' to 'Bilet *'
+                 Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+         Generating Code...
+         Compiling...
+         CAdresa.cpp
+         Generating Code...
+         Compiling...
          _CUser.cpp
      1>c:\users\ioana\documents\visual studio 2012\projects\tenisioana_git\tenisioana\_cuser.cpp(135): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
@@ -18,23 +34,12 @@
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : see declaration of 'strtok'
      1>c:\users\ioana\documents\visual studio 2012\projects\tenisioana_git\tenisioana\_cuser.cpp(434): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
-         Bilet.cpp
-         Generating Code...
-         Skipping... (no relevant changes detected)
+         UserFactory.cpp
+     1>c:\users\ioana\documents\visual studio 2012\projects\tenisioana_git\tenisioana\userfactory.h(2): warning C4067: unexpected tokens following preprocessor directive - expected a newline
          CUser.cpp
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Ioana\Documents\Visual Studio 2012\Projects\tenisIoana_git\Debug\tenisIoana.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Ioana\Documents\Visual Studio 2012\Projects\tenisIoana_git\Debug\tenisIoana.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Ioana\Documents\Visual Studio 2012\Projects\tenisIoana_git\Debug\tenisIoana.lib" /MACHINE:X86 Debug\Bilet.obj
-         Debug\CAdresa.obj
-         Debug\CExceptie.obj
-         Debug\CStrada.obj
-         Debug\CString.obj
-         Debug\CUser.obj
-         Debug\Source.obj
-         Debug\Utils.obj
-         Debug\_CUser.obj
-         tenisIoana.vcxproj -> C:\Users\Ioana\Documents\Visual Studio 2012\Projects\tenisIoana_git\Debug\tenisIoana.exe
-     1>Done Building Project "C:\Users\Ioana\Documents\Visual Studio 2012\Projects\tenisIoana_git\tenisIoana\tenisIoana.vcxproj" (Build target(s)).
+         Generating Code...
+     1>Done Building Project "C:\Users\Ioana\Documents\Visual Studio 2012\Projects\tenisIoana_git\tenisIoana\tenisIoana.vcxproj" (Build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:03.35
+Time Elapsed 00:00:03.46

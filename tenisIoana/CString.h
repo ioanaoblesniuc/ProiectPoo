@@ -1,6 +1,7 @@
 #pragma once
 #ifndef IOASTRING_H
 #define IOASTRING_H
+#include "includes.h"
 class CString
 {
 	char *s;
