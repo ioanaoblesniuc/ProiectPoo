@@ -2,7 +2,7 @@
 
 
 
-Bilet* BiletFactory::Create_Bilet(TypeBilet bilet,char*,int,bool)
+_Bilet* BiletFactory::Create_Bilet(TypeBilet bilet,char*,int,bool)
 {
 	switch (bilet)
 	{

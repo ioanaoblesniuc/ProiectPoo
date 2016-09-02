@@ -1,15 +1,15 @@
 #pragma once
-#include "CString.h"
 #include "CExceptie.h"
 #include "CStrada.h"
+#include "includes.h"
 
 //deci lucrez pe asta
 //gen acum
 //nu?dap haide sa adaugam o clasa.zi-mi tu un nume de clasa pe care vrei sa il adaugi clasa Bilet
 class CAdresa
 {
-	CString* _mTara;
-	CString* _mLocalitate;
+	string* _mTara;
+	string* _mLocalitate;
 	CStrada* _mStrada;
 public:
 	CAdresa();
@@ -19,8 +19,8 @@ public:
 	void setLocalitate(char*);
 	void setStrada(char*,int);
 
-	CString& getTara() const;
-	CString& getLocalitate() const;
+	string& getTara() const;
+	string& getLocalitate() const;
 	CStrada& getStrada() const;
 
 	~CAdresa();

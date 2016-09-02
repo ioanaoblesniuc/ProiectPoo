@@ -1,28 +1,26 @@
 #include "CAdresa.h"
-#include<iostream>
-using namespace std;
 
 CAdresa::CAdresa():_mStrada()
 {
-	_mTara = NULL;
-	_mLocalitate = NULL;
+	this->_mTara = NULL;
+	this->_mLocalitate = NULL;
 }
 
 CAdresa::CAdresa(char *tara,char* loc,char* str,int nr)
 {
 	_mStrada = new CStrada(str,nr);
-	_mTara = new CString(tara);
-	_mLocalitate = new CString(loc);
+	_mTara = new string(tara);
+	_mLocalitate = new string(loc);
 }
 
 void CAdresa::setTara(char* tara)
 {
-	_mTara->set_data(tara);
+	_mTara->assign(tara,strlen(tara));
 }
 
 void CAdresa::setLocalitate(char *loc)
 {
-	_mLocalitate->set_data(loc);
+	_mLocalitate->assign(loc, strlen(loc));
 }
 
 void CAdresa::setStrada(char *nume,int nr)
@@ -31,12 +29,12 @@ void CAdresa::setStrada(char *nume,int nr)
 	_mStrada->setNr(nr);
 }
 
-CString& CAdresa::getTara() const
+string& CAdresa::getTara() const
 {
 	return *_mTara;
 }
 
-CString& CAdresa::getLocalitate() const
+string& CAdresa::getLocalitate() const
 {
 	return *_mLocalitate;
 }

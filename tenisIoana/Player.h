@@ -1,14 +1,17 @@
 #pragma once
-#include "CString.h"
+#include "includes.h"
 class Player
 {
 	int GlobalRank;
-	CString name;
+	string name;
 	int sex;
-	CString tara;
+	string tara;
 public:
-	Player(void);
+	Player(std::string&);
+	Player(std::string&,int sex,int globalRank,string tara);
 	~Player(void);
-	CString toString();
+	void setNume(string& nume);
+	string getNume();
+	string toString();
 };
 

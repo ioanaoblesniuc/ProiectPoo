@@ -10,13 +10,13 @@ UserFactory::~UserFactory(void)
 {
 }
 
-CUser* UserFactory::Create_User(char*tip)
+_CUser* UserFactory::Create_User(char*tip)
 {
-	if(strcmp(tip,"Admin"))
+	if(strcmp(tip,"admin")==0)
 	{
 		return Admin::getInstance(tip);
 	}
-	else if(strcmp(tip,"Client"))
+	else if(strcmp(tip,"client") == 0)
 	{
 		return new Client(tip);
 	}

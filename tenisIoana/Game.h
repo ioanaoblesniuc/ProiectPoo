@@ -6,16 +6,28 @@
 #include "Score.h"
 class Game
 {
-	Player* player1;
-	Player* player2;
-	TenisCourt arena;
+	Game* m_Left;
+	Game* m_Right;
+	Game* parent;
+	Player* player;
+	TenisCourt* arena;
 	int level;
 	Score* scores;
 	bool isLive;
 	COra ora;
 	CData data;
 public:
-	Game(void);
+	Game* getPlayerLeft();
+	Game* getPlayerRight();
+	Player* getPlayer();
+	int		getLevel();
+	Game* load(FILE*);
+	Game(Game*,Game*);
+	Game(const Game & rhs);
+	Game(Player*player);
 	~Game(void);
+	Game();
+private:
+
 };
 

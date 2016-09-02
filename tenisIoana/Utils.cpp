@@ -1,5 +1,4 @@
 #include "Util.h"
-#include<string.h>
 
 void* myrealloc(void* ptr, int actualSize, int newSize)
 {

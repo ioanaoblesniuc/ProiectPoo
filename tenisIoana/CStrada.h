@@ -1,10 +1,10 @@
 #pragma once
-#include "CString.h"
+#include "includes.h"
 #include "CExceptie.h"
 
 class CStrada
 {
-	CString* _mNume;
+	string* _mNume;
 	int _mNr;
 public:
 	CStrada();
@@ -13,7 +13,7 @@ public:
 	void setNume(char*);
 	void setNr(int);
 
-	CString& getNume() const;
+	string& getNume() const;
 	int getNr() const;
 
 	virtual ~CStrada();

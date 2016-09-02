@@ -30,66 +30,66 @@ _CUser::_CUser(char* tip, char* name, char* pass, char* question,char* answ)
 void _CUser::setTip(char *tip)
 {
 	if (_mTip)
-		_mTip->set_data(tip);
+		_mTip->assign(tip,strlen(tip));
 	else
-		_mTip = new CString(tip);
+		_mTip = new string(tip);
 }
 
 void _CUser::setUsername(char *name)
 {
 	if(_mUsername)
-		_mUsername->set_data(name);
+		_mUsername->assign(name, strlen(name));
 	else
-		_mUsername = new CString(name);
+		_mUsername = new string(name);
 }
 
 void _CUser::setPassword(char* pass)
 {
 	if(_mPassword)
-		_mPassword->set_data(pass);
+		_mPassword->assign(pass, strlen(pass));
 	else
-		_mPassword = new CString(pass);
+		_mPassword = new string(pass);
 }
 
 void _CUser::setQuestion(char* question)
 {
 	if(_mQuestion)
-		_mQuestion->set_data(question);
+		_mQuestion->assign(question, strlen(question));
 	else
-		_mQuestion = new CString(question);
+		_mQuestion = new string(question);
 }
 
 void _CUser::setAnswer(char* answer)
 {
 	if(_mAnswer)
-		_mAnswer->set_data(answer);
+		_mAnswer->assign(answer, strlen(answer));
 	else
-		_mAnswer = new CString(answer);
+		_mAnswer = new string(answer);
 }
 
-CString& _CUser::getUsername()const
+string& _CUser::getUsername()const
 {
 	return *this->_mUsername;
 }
 
-CString& _CUser::getPassword() const
+string& _CUser::getPassword() const
 {
 	return *this->_mPassword;
 }
 
-CString& _CUser::getQuestion()const
+string& _CUser::getQuestion()const
 {
 	return *this->_mQuestion;
 }
 
-CString& _CUser::getAnswer()const
+string& _CUser::getAnswer()const
 {
 	return *this->_mAnswer;
 }
 
 bool _CUser::Check_username(char* name)
 {
-	if (strcmp(_mUsername->get_data(),name)==0)
+	if (strcmp(_mUsername->c_str(),name)==0)
 		return true;
 
 	return false;
@@ -97,7 +97,7 @@ bool _CUser::Check_username(char* name)
 
 bool _CUser::Check_password(char* pass)
 {
-	if (strcmp(_mPassword->get_data(),pass)==0)
+	if (strcmp(_mPassword->c_str(),pass)==0)
 		return true;
 
 	return false;
@@ -105,7 +105,7 @@ bool _CUser::Check_password(char* pass)
 
 bool _CUser::Check_answer(char* answer)
 {
-	if ( strcmp(_mAnswer->get_data(),answer)==0)
+	if ( strcmp(_mAnswer->c_str(),answer)==0)
 		return true;
 
 	return false;
@@ -124,7 +124,7 @@ void _CUser::Reset_password()
 {
 	char* newpass = new char[50];
 	cout << "Introduceti o parola de cel mult 50 caractere"<< endl;
-	CString pass = "";
+	string pass = "";
 	char ch;
 	ch = _getch();
 	while(ch!=13){
@@ -132,10 +132,10 @@ void _CUser::Reset_password()
 		cout << '*';
 		ch = _getch();
 	}
-	strcpy(newpass,pass.get_data());
+	strcpy(newpass,pass.c_str());
 	setPassword(newpass);
 	cout << endl << "\t\tParola resetata cu succes!";
-	cout << endl << "Bine ati venit, " << _mUsername->get_data() << "!!!" << endl;
+	cout << endl << "Bine ati venit, " << _mUsername->c_str() << "!!!" << endl;
 	delete[] newpass;
 
 }
@@ -147,7 +147,7 @@ void _CUser::Forget_password()
 	for ( int i = 0; i < 3 ; i++ )
 	{
 		cout << endl << "\t Raspunsul la intrebarea : ";
-		getQuestion().print();
+		std::cout << getQuestion();
 		cin >> Answer;
 		if (Check_answer(Answer) == true)
 		{
@@ -169,7 +169,7 @@ void _CUser::Login()
 {
 	char* passw = new char[256];
 	cout << "\tIntroduceti parola:\n";
-	CString pass = "";
+	string pass = "";
 	char ch;
 	ch = _getch();
 	while( ch!=13)
@@ -178,11 +178,11 @@ void _CUser::Login()
 		cout << '*';
 		ch = _getch();
 	}
-	strcpy(passw,pass.get_data());
+	strcpy(passw,pass.c_str());
 	if( Check_password(passw)== true)
 	{
 		_mConected = true;
-		cout << "Bine ati venit, " << _mUsername->get_data()<< "!" << endl;
+		cout << "Bine ati venit, " << _mUsername->c_str()<< "!" << endl;
 		delete[] passw;
 		return;
 	}
@@ -206,8 +206,8 @@ _CUser::~_CUser()
 		delete _mPassword;
 	if(_mQuestion)
 		delete _mQuestion;
-	if(_mAnswer);
-	delete _mAnswer;
+	if(_mAnswer)
+		delete _mAnswer;
 
 }
 
@@ -227,6 +227,7 @@ Client::Client(char* tip):_CUser()
 	_mTelefon = NULL;
 
 }
+
 Client::~Client()
 {
 	if (_mAdresaClient )
@@ -252,20 +253,20 @@ void Client::setAdresaClient(char* tara,char* loc,char* str,int nr)
 void Client::setEmail(char *email)
 {
 	if (_mEmail == NULL )
-		_mEmail = new CString(email);
+		_mEmail = new string(email);
 	else
 	{
-		_mEmail->set_data(email);
+		_mEmail->assign(email,strlen(email));
 	}
 }
 
 void Client::setTelefon(char* telefon)
 {
 	if(_mTelefon == NULL)
-		_mTelefon = new CString(telefon);
+		_mTelefon = new string(telefon);
 	else
 	{
-		_mTelefon->set_data(telefon);
+		_mTelefon->assign(telefon,strlen(telefon));
 	}
 }
 
@@ -282,7 +283,7 @@ void Client::Register()
 	delete[] username;
 	char* password = new char[256];
 	cout << endl << "Parola:" << endl;
-	CString pass = "";
+	string pass = "";
 	char ch;
 	ch = _getch();
 	while(ch!=13){
@@ -291,7 +292,7 @@ void Client::Register()
 		ch = _getch();
 	}
 
-	strcpy(password,pass.get_data());
+	strcpy(password,pass.c_str());
 	setPassword(password);
 	fprintf(f,"%s",password);
 	fprintf(f," ");
@@ -380,6 +381,26 @@ void Client::load(char *continut)
 	
 }
 
+std::string Client::toString()
+{
+	std::string s("client");
+	s = s + "*";
+	s = s + getUsername();
+	s = s + "*";
+	s = s + getPassword();
+	s = s + "*";
+	s = s + getQuestion();
+	s = s + "*";
+	s = s + getAnswer();
+	s = s + "*";
+	s = s + getAnswer();
+	s = s + "*";
+	s = s + getAnswer();
+	s = s + "*";
+	s = s + getAnswer();
+	return s;
+}
+
 Admin* Admin::_mInstance = NULL;
 
 Admin* Admin::getInstance(char *tip)
@@ -423,7 +444,7 @@ void Admin::Register()
 
 	char* password = new char[256];
 	cout << endl << "\tParola:" << endl;
-	CString pass = "";
+	string pass = "";
 	char ch;
 	ch = _getch();
 	while(ch!=13){
@@ -431,7 +452,7 @@ void Admin::Register()
 	cout << '*';
 	ch = _getch();
 	}
-	strcpy(password,pass.get_data());
+	strcpy(password,pass.c_str());
 	setPassword(password);
 	delete[] password;
 
@@ -447,4 +468,34 @@ void Admin::Register()
 	setAnswer(answer);
 	delete[] answer;
 	cout << endl << "\t\tBine ati venit!" << endl;
+}
+
+void Admin::setAdresaClient(char* tara, char* loc, char* str, int nr)
+{
+	throw new CExceptie(ERR_INVALID_OPERATION, "Operatie nepermisa");
+}
+
+void Admin::setEmail(char*)
+{
+	throw new CExceptie(ERR_INVALID_OPERATION, "Operatie nepermisa");
+}
+
+void Admin::setTelefon(char*)
+{
+	throw new CExceptie(ERR_INVALID_OPERATION, "Operatie nepermisa");
+}
+
+string Admin::toString()
+{
+	string s("admin");
+	s = s+ "*";
+	s = s + getUsername();
+	s = s + "*";
+	s = s + getPassword();
+	s = s + "*";
+	s = s + getQuestion();
+	s = s + "*";
+	s = s + getAnswer();
+
+	return s;
 }

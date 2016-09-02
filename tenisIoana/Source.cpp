@@ -1,9 +1,15 @@
-#include<iostream>
-using namespace std;
-
+#include "Application.h"
 void main()
 {
-	char ch;
-	cin >> ch;
-	cout << ch;
+	try
+	{
+		Application ap;
+		ap.Login("ioana", "ioana", "cati ani?", "16");
+
+		
+	}
+	catch (CExceptie exc)
+	{
+
+	}
 }

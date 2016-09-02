@@ -5,14 +5,14 @@
 CExceptie::CExceptie(int code, char* message)
 {
 	mCod = code;
-	mMesaj = strdup(message);
+	mMesaj = _strdup(message);
 	mArgOb = NULL;
 }
 
 CExceptie::CExceptie(int code,char* message,void* argObj)
 {
 	mCod = code;
-	mMesaj = strdup(message);
+	mMesaj = _strdup(message);
 	mArgOb = argObj;
 }
 

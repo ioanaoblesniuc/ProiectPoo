@@ -1,10 +1,10 @@
-#include "CString.h"
+#include "string.h"
 #include <list>
 #include "Zbor.h"
 
 class Companie
 {
-	CString* _mNume;
+	string _mNume;
 	int _mTimpRezervare;
 	list<CZbor> _mZboruri;
 public:
@@ -12,7 +12,7 @@ public:
 	Companie(char*,int);
 	void setNume(char*);
 	void setTimp(int);
-	CString& getNume()const;
+	string& getNume()const;
 	int getTimp()const;
 	void printFlight(char*,char*);
 	void printFlight(char*);
@@ -20,7 +20,7 @@ public:
 	void loadFlights(char*,int);
 	void insertFlight(char*);
 	void deleteFlight(char*);
-	CString& generareIDFlight();
+	string& generareIDFlight();
 	void printFlightScedule();
 	virtual ~Companie();
 };

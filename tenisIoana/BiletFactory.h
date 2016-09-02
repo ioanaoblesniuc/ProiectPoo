@@ -1,10 +1,9 @@
 #pragma once
-#include "Bilet.h"
+#include "_Bilet.h"
+#include "TypeBilet.h"
 class BiletFactory
 {
 public:
-	BiletFactory(void);
-	~BiletFactory(void);
-	static Bilet* Create_Bilet(TypeBilet,char*,int,bool);
+	static _Bilet* Create_Bilet(TypeBilet,char*,int,bool);
 };
 

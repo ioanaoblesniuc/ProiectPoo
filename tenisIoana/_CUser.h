@@ -1,30 +1,27 @@
 #pragma once
-#include "CUser.h"
 #include "CAdresa.h"
-
-class _CUser:public CUser
+#include "includes.h"
+class _CUser
 {
 protected:
-	CString* _mTip;
+	string* _mTip;
 	bool _mConected;
-	CString* _mUsername;
-	CString* _mPassword;
-	CString* _mQuestion;
-	CString* _mAnswer;
+	string* _mUsername;
+	string* _mPassword;
+	string* _mQuestion;
+	string* _mAnswer;
 public:
 	_CUser();
 	_CUser(char*,char*,char*,char*,char*);
-
 	void setTip(char*);
 	void setUsername(char*);
 	void setPassword(char*);
 	void setQuestion(char*);
 	void setAnswer(char*);
-
-	CString& getUsername()const;
-	CString& getPassword() const;
-	CString& getQuestion() const;
-	CString& getAnswer() const;
+	string& getUsername()const;
+	string& getPassword() const;
+	string& getQuestion() const;
+	string& getAnswer() const;
 	bool Check_username(char*);
 	bool Check_password(char*);
 	bool Check_answer(char*);
@@ -35,29 +32,29 @@ public:
 	void Logout();
 	virtual void Register()=0;
 	virtual void load(char*)=0;
-
+	virtual void setAdresaClient(char* tara, char* loc, char* str, int nr) = 0;
+	virtual void setEmail(char*) = 0;
+	virtual void setTelefon(char*) = 0;
 	virtual ~_CUser();
+	virtual std::string toString()=0;
 };
 
 class Client:public _CUser
 {
 	CAdresa* _mAdresaClient;
-	CString* _mEmail;
-	CString* _mTelefon;
+	string* _mEmail;
+	string* _mTelefon;
 public:
 	Client();
 	Client(char* tip);
-
 	void setAdresaClient(char*,char*,char*,int);
 	void setEmail(char*);
 	void setTelefon(char*);
-
 	void Register();
 	void load(char* filename);
-
+	virtual std::string toString();
 	//ce am in cos
 	void setCos();
-
 	virtual ~Client();
 };
 
@@ -73,4 +70,9 @@ public:
 	static void DestroyInstance();
 	void Register();
 	void load(char*){}
+	//not allowed methods
+	void setAdresaClient(char* tara, char* loc, char* str, int nr);
+	void setEmail(char*);
+	void setTelefon(char*);
+	virtual std::string toString();
 };

@@ -1,3 +1,5 @@
+#pragma once
+#include "Util.h"
 class COra
 {
 	int _mOra;
@@ -5,8 +7,7 @@ class COra
 public:
 	COra();
 	COra(int,int);
-	COra(COra& ora);
-
+	static COra fromString(const string& rhs);
 	void setOra(int,int);
 	COra& getOra() const;
 	int _getOra() const;
@@ -15,7 +16,6 @@ public:
 	void printOra();
 
 	bool operator==(COra& X);
-	void operator=(COra& X);
 
 	~COra(){}
 };

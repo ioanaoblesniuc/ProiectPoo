@@ -1,3 +1,5 @@
+#pragma once
+#include "Util.h"
 class CData
 {
 	int _mZi;
@@ -6,9 +8,9 @@ class CData
 public:
 	CData();
 	CData(int,int,int);
-	CData(CData& data);
-
+	CData(const CData& data);
 	void setData(int,int,int);
+	static CData fromString(const string&); // format zz::ll::yyyy
 	CData& getData() const;
 	int getZi() const;
 	int getLuna() const;
@@ -17,7 +19,6 @@ public:
 	void printData();
 
 	bool operator==(CData& X);
-	void operator=(CData& X);
 	bool operator<(CData& X);
 	bool operator>(CData& X);
 

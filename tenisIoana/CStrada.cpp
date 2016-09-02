@@ -1,6 +1,4 @@
 #include "CStrada.h"
-#include<iostream>
-using namespace std;
 
 CStrada::CStrada()
 {
@@ -10,13 +8,13 @@ CStrada::CStrada()
 
 CStrada::CStrada(char* nume,int nr)
 {
-	_mNume = new CString(nume);
+	_mNume = new string(nume);
 	setNr(nr);
 }
 
 void CStrada::setNume(char* nume)
 {
-	_mNume->set_data(nume);
+	*_mNume = nume;
 }
 
 void CStrada::setNr(int nr)
@@ -24,7 +22,7 @@ void CStrada::setNr(int nr)
 	_mNr = nr;
 }
 
-CString& CStrada::getNume() const
+string& CStrada::getNume() const
 {
 	return *_mNume;
 }
@@ -32,5 +30,5 @@ CString& CStrada::getNume() const
 CStrada::~CStrada()
 {
 	if(_mNume)
-		delete _mNume;
+		delete this->_mNume;
 }

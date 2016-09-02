@@ -1,5 +1,5 @@
 #pragma once
-#include "CString.h"
+#include "string.h"
 #include <list>
 class Inchiriere
 {

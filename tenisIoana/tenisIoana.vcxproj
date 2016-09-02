@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -19,13 +19,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -51,7 +51,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -76,17 +76,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Bilet.h" />
+    <ClInclude Include="AppConfig.h" />
+    <ClInclude Include="Application.h" />
+    <ClInclude Include="BiletFactory.h" />
     <ClInclude Include="CAdresa.h" />
-    <ClInclude Include="CData.h" />
+    <ClInclude Include="cdata.h" />
     <ClInclude Include="CExceptie.h" />
     <ClInclude Include="Companies.h" />
     <ClInclude Include="CStrada.h" />
-    <ClInclude Include="CString.h" />
-    <ClInclude Include="CUser.h" />
     <ClInclude Include="Errors.h" />
+    <ClInclude Include="Features.h" />
+    <ClInclude Include="Game.h" />
     <ClInclude Include="Inchiriere.h" />
-    <ClInclude Include="Ora.h" />
+    <ClInclude Include="includes.h" />
+    <ClInclude Include="ora.h" />
+    <ClInclude Include="Place.h" />
+    <ClInclude Include="player.h" />
+    <ClInclude Include="Properties.h" />
+    <ClInclude Include="Score.h" />
+    <ClInclude Include="teniscourt.h" />
+    <ClInclude Include="ticket.h" />
+    <ClInclude Include="tournement.h" />
+    <ClInclude Include="TreeGame.h" />
     <ClInclude Include="Turneu.h" />
     <ClInclude Include="UserFactory.h" />
     <ClInclude Include="Util.h" />
@@ -95,18 +106,35 @@
     <ClInclude Include="_CUser.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Application.cpp" />
     <ClCompile Include="Bilet.cpp" />
+    <ClCompile Include="BiletFactory.cpp" />
     <ClCompile Include="CAdresa.cpp" />
+    <ClCompile Include="CData.cpp" />
     <ClCompile Include="CExceptie.cpp" />
+    <ClCompile Include="Companies.cpp" />
+    <ClCompile Include="COra.cpp" />
     <ClCompile Include="CStrada.cpp" />
-    <ClCompile Include="CString.cpp" />
-    <ClCompile Include="CUser.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="Inchiriere.cpp" />
+    <ClCompile Include="Place.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Score.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="TenisCourt.cpp" />
+    <ClCompile Include="Ticket.cpp" />
+    <ClCompile Include="Tournement.cpp" />
+    <ClCompile Include="TreeGame.cpp" />
     <ClCompile Include="UserFactory.cpp" />
     <ClCompile Include="Utils.cpp" />
     <ClCompile Include="_Bilet.cpp" />
     <ClCompile Include="_CUser.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="players.txt" />
+    <Text Include="users.txt" />
+    <Text Include="USOpen-places.txt" />
+    <Text Include="USOpen.tur" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

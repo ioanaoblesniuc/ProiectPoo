@@ -1,10 +1,17 @@
 #pragma once
-#include "CString.h"
+#include "includes.h"
 class Place
 {
 	int sector;
 	int number;
 	bool busy;
 public:
-	void print();
+	Place(int, int, bool);
+	string toString();
+	void setBusy();
+	bool isBusy();
+	void setEmpty();
+	int getSector();
+	int getNumber();
+	bool operator==(Place& rhs);
 };

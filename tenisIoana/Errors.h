@@ -1,6 +1,6 @@
 #ifndef ERRORS_H
 #define ERRORS_H
-
+//
 #define SUCCES 0
 
 #define ERR_BASE 100
@@ -13,5 +13,7 @@
 #define ERR_ACCESS_FORBIDDEN	(ERR_BASE + 6)
 #define ERR_DELETE				(ERR_BASE + 7)
 #define ERR_NON_EXISTENT		(ERR_BASE + 8)
+#define ERR_WRONG_CREDENTIALS	(ERR_BASE + 9)
+#define ERR_INVALID_OPERATION	(ERR_BASE + 10)
 
 #endif

@@ -1,5 +1,6 @@
 #include "includes.h"
 #include "Properties.h"
+#include "Util.h"
 
 class AppConfig{
 	std::map<Properties,char*> properties;
@@ -17,5 +18,9 @@ public:
 	char* get(Properties proprety)
 	{
 		return  properties.find(proprety)->second;
+	}
+	float get(Feature proprety)
+	{
+		return  pricePerFeature.find(proprety)->second;
 	}
 };

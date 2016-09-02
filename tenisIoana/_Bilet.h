@@ -1,14 +1,13 @@
 #pragma once
-#include "Bilet.h"
 #include "_CUser.h"
 class _Bilet
 {
 protected:
-	CString _mID;
-	CString _mClasaRezervare;
+	string _mID;
+	string _mClasaRezervare;
 	bool _mDisponibil;
 	int _mPret;
-	Client _mDateClient;
+	_CUser* _mDateClient;
 public:
 	_Bilet();
 	_Bilet(char*,char*,int);
@@ -17,10 +16,10 @@ public:
 	void setClasaRezervare(char*);
 	void setPret(int);
 	void setDisponibil(bool);
-	void setDateClient(CUser*);
+	void setDateClient(_CUser*);
 
-	CString getID() const;
-	CString getClasaRezervare() const;
+	string getID() const;
+	string getClasaRezervare() const;
 	int getPret() const;
 	bool getDisponibil()const;
 	Client getDateClient() const;

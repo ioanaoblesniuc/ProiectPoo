@@ -31,17 +31,26 @@
     <Filter Include="Source Files\exceptions">
       <UniqueIdentifier>{20301c19-e64f-430c-8125-7d36a4cca262}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\TennisManagment">
+    <Filter Include="Header Files\apps">
+      <UniqueIdentifier>{0595bea6-b8c2-4578-85df-a01c0717a7ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\apps">
+      <UniqueIdentifier>{54455af6-0433-4de2-a54f-c6deabbc633b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\air">
       <UniqueIdentifier>{833cd776-81aa-43e9-a9f4-5ad338c08d56}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Turneu">
+    <Filter Include="Source Files\air">
+      <UniqueIdentifier>{4cdddb5c-4020-40fa-8c80-ae7a2ee42808}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\tournement">
       <UniqueIdentifier>{05bf1843-7a9c-4672-9444-7fdc631d3f56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tournement">
+      <UniqueIdentifier>{0215b83b-9c3e-4d8b-b877-34e4cafb24bb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CUser.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="CStrada.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -49,9 +58,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="_CUser.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CString.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="UserFactory.h">
@@ -66,38 +72,71 @@
     <ClInclude Include="Errors.h">
       <Filter>Header Files\exceptions</Filter>
     </ClInclude>
-    <ClInclude Include="Bilet.h">
-      <Filter>Header Files\TennisManagment</Filter>
-    </ClInclude>
     <ClInclude Include="_Bilet.h">
-      <Filter>Header Files\TennisManagment</Filter>
+      <Filter>Header Files\air</Filter>
     </ClInclude>
     <ClInclude Include="Inchiriere.h">
-      <Filter>Header Files\TennisManagment</Filter>
+      <Filter>Header Files\air</Filter>
     </ClInclude>
     <ClInclude Include="Zbor.h">
-      <Filter>Header Files\TennisManagment</Filter>
-    </ClInclude>
-    <ClInclude Include="Ora.h">
-      <Filter>Header Files\util</Filter>
-    </ClInclude>
-    <ClInclude Include="CData.h">
-      <Filter>Header Files\util</Filter>
+      <Filter>Header Files\air</Filter>
     </ClInclude>
     <ClInclude Include="Turneu.h">
-      <Filter>Header Files\Turneu</Filter>
+      <Filter>Header Files\tournement</Filter>
     </ClInclude>
     <ClInclude Include="Companies.h">
-      <Filter>Header Files\TennisManagment</Filter>
+      <Filter>Header Files\air</Filter>
+    </ClInclude>
+    <ClInclude Include="Properties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Features.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="includes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Place.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ticket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cdata.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="ora.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="BiletFactory.h">
+      <Filter>Header Files\factories</Filter>
+    </ClInclude>
+    <ClInclude Include="AppConfig.h">
+      <Filter>Header Files\apps</Filter>
+    </ClInclude>
+    <ClInclude Include="Application.h">
+      <Filter>Header Files\apps</Filter>
+    </ClInclude>
+    <ClInclude Include="player.h">
+      <Filter>Header Files\tournement</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files\tournement</Filter>
+    </ClInclude>
+    <ClInclude Include="teniscourt.h">
+      <Filter>Header Files\tournement</Filter>
+    </ClInclude>
+    <ClInclude Include="tournement.h">
+      <Filter>Header Files\tournement</Filter>
+    </ClInclude>
+    <ClInclude Include="Score.h">
+      <Filter>Header Files\tournement</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeGame.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CString.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CUser.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="CStrada.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -108,9 +147,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Bilet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="UserFactory.cpp">
@@ -128,5 +164,61 @@
     <ClCompile Include="Inchiriere.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Ticket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CData.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="COra.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="BiletFactory.cpp">
+      <Filter>Source Files\factories</Filter>
+    </ClCompile>
+    <ClCompile Include="Application.cpp">
+      <Filter>Source Files\apps</Filter>
+    </ClCompile>
+    <ClCompile Include="Bilet.cpp">
+      <Filter>Source Files\air</Filter>
+    </ClCompile>
+    <ClCompile Include="Companies.cpp">
+      <Filter>Source Files\air</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files\tournement</Filter>
+    </ClCompile>
+    <ClCompile Include="Score.cpp">
+      <Filter>Source Files\tournement</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files\tournement</Filter>
+    </ClCompile>
+    <ClCompile Include="Place.cpp">
+      <Filter>Source Files\tournement</Filter>
+    </ClCompile>
+    <ClCompile Include="TenisCourt.cpp">
+      <Filter>Source Files\tournement</Filter>
+    </ClCompile>
+    <ClCompile Include="Tournement.cpp">
+      <Filter>Source Files\tournement</Filter>
+    </ClCompile>
+    <ClCompile Include="TreeGame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="players.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="users.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="USOpen.tur">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="USOpen-places.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

@@ -1,4 +1,4 @@
-#include "CString.h"
+#include "string.h"
 #include<list>
 #include "_Bilet.h"
 #include "Inchiriere.h"
@@ -7,13 +7,13 @@
 
 class CZbor
 {
-	CString* _mID;
-	CString* _mLocatie;
-	CString* _mDestinatie;
+	string* _mID;
+	string* _mLocatie;
+	string* _mDestinatie;
 	CData* _mData;
 	COra* _mOraPlecare;
 	COra* _mOraSosire;
-	list<Bilet*> _mLocuri;
+	list<_Bilet*> _mLocuri;
 	int _mNrLocuri;
 	Inchiriere _mScump;
 	Inchiriere _mIeftin;
@@ -32,9 +32,9 @@ public:
 	void setPretIeftin(int);
 	void setPretScump(int);
 
-	CString& getID()const;
-	CString& getLocatie() const;
-	CString& getDestinatie() const;
+	string& getID()const;
+	string& getLocatie() const;
+	string& getDestinatie() const;
 	CData& getData()const;
 	COra& getOraPlecare()const;
 	COra& getOraSosire()const;
@@ -43,7 +43,7 @@ public:
 	void GenerareLocuri();
 	void printLocuriLibere();
 	void addRezervare(char*);
-	void AnuleazaRezervare(CString);
+	void AnuleazaRezervare(string);
 	void addClientiAsteptare();
 	void printDetalii();
 

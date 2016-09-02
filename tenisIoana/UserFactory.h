@@ -1,8 +1,9 @@
 #pragma once
-#include "_CUser.h"s
+#include "_CUser.h"
 class UserFactory
 {
-	static CUser* Create_User(char*tip);
+public:
+	static _CUser* Create_User(char*tip);
 public:
 	UserFactory(void);
 	~UserFactory(void);
